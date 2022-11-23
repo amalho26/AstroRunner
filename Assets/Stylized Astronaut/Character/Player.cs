@@ -3,33 +3,68 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-		private Animator anim;
-		private CharacterController controller;
-
 		public float speed = 600.0f;
-		public float turnSpeed = 400.0f;
-		private Vector3 moveDirection = Vector3.zero;
-		public float gravity = 20.0f;
+		private bool right = false;
+		private bool left = false;
+		float centerRight = 6f;
+		float centerLeft = -6f;
+		float center = 0f;
+		float checkDistance = 0.001f;
+		float movementSpeed = 10f;
+		float targetPosition;
+		
 
 		void Start () {
-			controller = GetComponent <CharacterController>();
-			anim = gameObject.GetComponentInChildren<Animator>();
+			
 		}
 
 		void Update (){
-			if (Input.GetKey ("w")) {
-				anim.SetInteger ("AnimationPar", 1);
-			}  else {
-				anim.SetInteger ("AnimationPar", 0);
+			transform.position = transform.position + (transform.forward * speed * Time.deltaTime);
+			//Debug.Log(transform.position.x);
+			
+
+			if(Input.GetKey(KeyCode.RightArrow) && transform.position.x < 4.9){
+				right = true;
+				targetPosition = transform.position.x + 5f;
+				Debug.Log("Right");
+			
+			}else if(Input.GetKey(KeyCode.LeftArrow) && transform.position.x > -4.9){
+			left = true;
+			targetPosition = transform.position.x - 5f;
+			}				
+
+			if(right)
+			{
+				left = false;
+				
+				
+				
+				Vector3 newPosition = new Vector3(targetPosition, transform.position.y, transform.position.z);
+				
+				if (Mathf.Abs(targetPosition - transform.position.x) > checkDistance)    
+				{
+					transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime * movementSpeed);
+				} else{
+					right = false;
+				}
 			}
 
-			if(controller.isGrounded){
-				moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
+			if(left)
+			{
+				right = false;
+				
+				
+				
+				
+				Vector3 newPosition = new Vector3(targetPosition, transform.position.y, transform.position.z);
+				
+				if (Mathf.Abs(targetPosition - transform.position.x) > checkDistance)    
+				{
+					transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime * movementSpeed);
+				} else{
+					left = false;
+				}
 			}
-
-			float turn = Input.GetAxis("Horizontal");
-			transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
-			controller.Move(moveDirection * Time.deltaTime);
-			moveDirection.y -= gravity * Time.deltaTime;
+			
 		}
 }
