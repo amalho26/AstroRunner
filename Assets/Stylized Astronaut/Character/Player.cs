@@ -4,6 +4,10 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 		public float speed = 600.0f;
+		public GameObject leftFloor;
+		public GameObject rightFloor;
+		public GameObject middleFloor;
+
 		private bool right = false;
 		private bool left = false;
 		float centerRight = 6f;
@@ -23,14 +27,15 @@ public class Player : MonoBehaviour {
 			//Debug.Log(transform.position.x);
 			
 
-			if(Input.GetKey(KeyCode.RightArrow) && transform.position.x < 4.9){
+			if(Input.GetKey(KeyCode.RightArrow)){
+				if(gameObject)
 				right = true;
-				targetPosition = transform.position.x + 5f;
+				targetPosition = transform.position.x + 2.5f;
 				Debug.Log("Right");
 			
-			}else if(Input.GetKey(KeyCode.LeftArrow) && transform.position.x > -4.9){
+			}else if(Input.GetKey(KeyCode.LeftArrow) && transform.position.x > -4.7){
 			left = true;
-			targetPosition = transform.position.x - 5f;
+			targetPosition = transform.position.x - 2.5f;
 			}				
 
 			if(right)
