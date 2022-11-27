@@ -23,15 +23,14 @@ public class Player : MonoBehaviour {
 			//Debug.Log(transform.position.x);
 			
 
-			if(Input.GetKey(KeyCode.RightArrow) && transform.position.x < 4.5){
+			if(Input.GetKey(KeyCode.RightArrow) && transform.position.x < 4.9){
 				right = true;
-				targetPosition = transform.position.x + 2.5f;
+				targetPosition = transform.position.x + 5f;
 				Debug.Log("Right");
 			
-			}else if(Input.GetKey(KeyCode.LeftArrow) && transform.position.x > -4.5){
+			}else if(Input.GetKey(KeyCode.LeftArrow) && transform.position.x > -4.9){
 			left = true;
-			
-			targetPosition = transform.position.x - 2.5f;
+			targetPosition = transform.position.x - 5f;
 			}				
 
 			if(right)
