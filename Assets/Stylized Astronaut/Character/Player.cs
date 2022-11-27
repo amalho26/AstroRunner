@@ -4,53 +4,45 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 		public float speed = 600.0f;
-		public GameObject leftFloor;
-		public GameObject rightFloor;
-		public GameObject middleFloor;
-
+		Vector3 targetPositionRight = new Vector3(5f,0f,42f);
+		Vector3 targetPositionLeft = new Vector3(-5f,0f,42f);
+		Vector3 targetPositionMiddle = new Vector3(0f,0f,42f);
+		Vector3 newPosition;
 		private bool right = false;
 		private bool left = false;
-		float centerRight = 6f;
-		float centerLeft = -6f;
-		float center = 0f;
 		float checkDistance = 0.001f;
-		float movementSpeed = 10f;
-		float targetPosition;
+		float movementSpeed = 8f;
+		//float targetPosition;
 		
 
 		void Start () {
-			
 		}
 
 		void Update (){
-			transform.position = transform.position + (transform.forward * speed * Time.deltaTime);
-			//Debug.Log(transform.position.x);
-			
 
 			if(Input.GetKey(KeyCode.RightArrow)){
-				if(gameObject)
 				right = true;
-				targetPosition = transform.position.x + 2.5f;
-				Debug.Log("Right");
-			
-			}else if(Input.GetKey(KeyCode.LeftArrow) && transform.position.x > -4.7){
-			left = true;
-			targetPosition = transform.position.x - 2.5f;
+				if(transform.position.x<-1){
+					newPosition = targetPositionMiddle;
+				}else{
+					newPosition = targetPositionRight;
+				}
+			}else if(Input.GetKey(KeyCode.LeftArrow)){
+				left = true;
+				if(transform.position.x>1){
+					newPosition = targetPositionMiddle;
+				}else{
+					newPosition = targetPositionLeft;
+				}
 			}				
 
 			if(right)
 			{
 				left = false;
 				
-				
-				
-				Vector3 newPosition = new Vector3(targetPosition, transform.position.y, transform.position.z);
-				
-				if (Mathf.Abs(targetPosition - transform.position.x) > checkDistance)    
+				if (Mathf.Abs(newPosition.x - transform.position.x) > checkDistance)    
 				{
 					transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime * movementSpeed);
-				} else{
-					right = false;
 				}
 			}
 
@@ -58,18 +50,12 @@ public class Player : MonoBehaviour {
 			{
 				right = false;
 				
-				
-				
-				
-				Vector3 newPosition = new Vector3(targetPosition, transform.position.y, transform.position.z);
-				
-				if (Mathf.Abs(targetPosition - transform.position.x) > checkDistance)    
+				if (Mathf.Abs(newPosition.x - transform.position.x) > checkDistance)    
 				{
 					transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime * movementSpeed);
-				} else{
-					left = false;
 				}
 			}
 			
 		}
+
 }
