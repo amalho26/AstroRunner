@@ -1,32 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 public class StarController : MonoBehaviour
 {
 
-    public float tempo;
+    public float duration = 3;
+    public Transform target;
+    private float timer;
+    public float triggerTime;
     public bool hasStarted;
+    public AudioSource audioSource;
+    public bool startPlaying;
+    public GameObject player;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        tempo = tempo/30f;
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if(!hasStarted)
-        {
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                hasStarted = true;
-            }
+      timer += Time.deltaTime;
+      if(timer>=triggerTime-duration)
+      {
+        SendNote();
+      }
+
+
+    }
+    void OnTriggerEnter(Collider col){
+      Debug.Log("Star hit");
+        if(col.gameObject == player){
+            audioSource.Play();
         }
-        else
-        {
-            transform.position -= new Vector3(0, 0, tempo * Time.deltaTime);
-        }
+    }
+
+    void SendNote()
+    {
+        transform.DOMove(target.position, duration);
     }
 }
