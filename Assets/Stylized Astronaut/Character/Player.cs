@@ -13,12 +13,16 @@ public class Player : MonoBehaviour {
 		float checkDistance = 0.001f;
 		float movementSpeed = 8f;
 		//float targetPosition;
+		public GameObject Lstar, Rstar, Mstar;
 		
 
 		void Start () {
+			
+			SpawnStars();
 		}
 
 		void Update (){
+			//SpawnStars();
 
 			if(Input.GetKey(KeyCode.RightArrow)){
 				right = true;
@@ -56,6 +60,11 @@ public class Player : MonoBehaviour {
 				}
 			}
 			
+		}
+		void SpawnStars(){
+			GameObject leftStar = Instantiate(Lstar, new Vector3(-5f,1f,70f), Quaternion.identity);
+			GameObject rightStar = Instantiate(Rstar, new Vector3(5f,1f,70f), Quaternion.identity);
+			GameObject middleStar = Instantiate(Mstar, new Vector3(0f,1f,70f), Quaternion.identity);
 		}
 
 }

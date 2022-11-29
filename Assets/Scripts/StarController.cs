@@ -28,8 +28,13 @@ public class StarController : MonoBehaviour
     }
     void OnTriggerEnter(Collider col){
       Debug.Log("Star hit");
-        if(col.gameObject == player){
+     
+      
+        if(col.gameObject.tag == player.tag){
+          Debug.Log("Player hit");
             audioSource.Play();
+            
+
         }
     }
 
