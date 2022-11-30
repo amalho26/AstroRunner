@@ -398,7 +398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &459109647
 Transform:
   m_ObjectHideFlags: 0
@@ -407,7 +407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459109646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -693,7 +693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1057262611
 Transform:
   m_ObjectHideFlags: 0
@@ -1371,6 +1371,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 464344077}
     - target: {fileID: 1774227795499206254, guid: 89b2e4b9b1c3c4bccb96b21e8f98e6ac, type: 3}
+      propertyPath: duration
+      value: 1.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774227795499206254, guid: 89b2e4b9b1c3c4bccb96b21e8f98e6ac, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1448983963}
@@ -1615,6 +1619,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1058200948}
     - target: {fileID: 7550455550663590995, guid: 3c1455143c20644b6aea1fb35715b868, type: 3}
+      propertyPath: duration
+      value: 0.6822
+      objectReference: {fileID: 0}
+    - target: {fileID: 7550455550663590995, guid: 3c1455143c20644b6aea1fb35715b868, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1448983963}
@@ -1687,6 +1695,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1333880298}
+    - target: {fileID: 7593819293296908651, guid: 4e9ad374f9b1c424ab4faceccce892cb, type: 3}
+      propertyPath: duration
+      value: 0.6822
+      objectReference: {fileID: 0}
     - target: {fileID: 7593819293296908651, guid: 4e9ad374f9b1c424ab4faceccce892cb, type: 3}
       propertyPath: audioSource
       value: 

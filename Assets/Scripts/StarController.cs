@@ -13,9 +13,16 @@ public class StarController : MonoBehaviour
     public AudioSource audioSource;
     public bool startPlaying;
     public GameObject player;
+   
 
     // Start is called before the first frame update
     // Update is called once per frame
+
+
+    void Start()
+    {
+
+    }
     void Update()
     {
       timer += Time.deltaTime;

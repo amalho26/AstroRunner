@@ -12,13 +12,14 @@ public class Player : MonoBehaviour {
 		private bool left = false;
 		float checkDistance = 0.001f;
 		float movementSpeed = 8f;
+		int randomControl = 2;
 		//float targetPosition;
 		public GameObject Lstar, Rstar, Mstar;
+
 		
 
 		void Start () {
-			
-			SpawnStars();
+			StartCoroutine(Wait2());
 		}
 
 		void Update (){
@@ -62,9 +63,34 @@ public class Player : MonoBehaviour {
 			
 		}
 		void SpawnStars(){
-			GameObject leftStar = Instantiate(Lstar, new Vector3(-5f,1f,70f), Quaternion.identity);
-			GameObject rightStar = Instantiate(Rstar, new Vector3(5f,1f,70f), Quaternion.identity);
-			GameObject middleStar = Instantiate(Mstar, new Vector3(0f,1f,70f), Quaternion.identity);
+			int random;
+			do{
+				random = Random.Range(1, 4);
+			}while(System.Math.Abs(random - randomControl) != 1);
+			
+			if(random == 1){
+				Instantiate(Lstar, new Vector3(-5f,1f,70f), Quaternion.identity);
+				randomControl = 1;
+			}else if(random == 2){
+				Instantiate(Mstar, new Vector3(0f,1f,70f), Quaternion.identity);
+				randomControl = 2;
+			}else if(random == 3){
+				Instantiate(Rstar, new Vector3(5f,1f,70f), Quaternion.identity);
+				randomControl = 3;
+			}
+			StartCoroutine(Wait());
+		}
+		IEnumerator Wait()
+		{
+			yield return new WaitForSeconds(0.976f);
+			SpawnStars();
+			
+		}
+		IEnumerator Wait2()
+		{
+			yield return new WaitForSeconds(23.1f);
+			SpawnStars();
+			
 		}
 
 }
