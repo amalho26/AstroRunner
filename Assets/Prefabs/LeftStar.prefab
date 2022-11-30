@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93781a0956ef54a21b7fd6e6756684d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 3814550416896377154, guid: 03cf2bbe946b04b35aae5f1cff500ce4, type: 3}
   duration: 1.36
   target: {fileID: 3898931279854001550, guid: 13f8ca6bccabb496cbea90dd5bacc8bd, type: 3}
   triggerTime: 0

@@ -88,7 +88,7 @@ public class Player : MonoBehaviour {
 		}
 		IEnumerator Wait2()
 		{
-			yield return new WaitForSeconds(23.1f);
+			yield return new WaitForSeconds(3f);
 			SpawnStars();
 			
 		}
