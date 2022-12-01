@@ -8,7 +8,6 @@ public class Pause : MonoBehaviour
     public GameObject pause;
     public AudioSource song; 
     public GameObject score;
-    public GameManager GM;
     public bool isPaused = false;
 
 
@@ -35,7 +34,7 @@ public class Pause : MonoBehaviour
     public void Quit()
 
         {
-        GM.Restart();
+        
         Debug.Log("Game is quit");
         #if UNITY_EDITOR
          // Application.Quit() does not work in the editor so

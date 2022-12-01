@@ -7,7 +7,8 @@ using TMPro;
 public class StarController : MonoBehaviour
 {
 
-    public GameManager GM;
+    // public GameController GC ;
+    public GameController GC;
     public float duration = 3;
     public Transform target;
     private float timer;
@@ -38,14 +39,8 @@ public class StarController : MonoBehaviour
         if(col.gameObject.tag == player.tag){
           Debug.Log("************************* Player hit *************************");
           audioSource.Play();
-          GM.BoostScore();
-          WaitForSeconds(2);
-          GM.Deboost();          
+          GC.AdjustScore(100f);         
         }
-    }
-    IEnumerator WaitForSeconds(float time)
-    {
-        yield return new WaitForSeconds(time);
     }
 
 
