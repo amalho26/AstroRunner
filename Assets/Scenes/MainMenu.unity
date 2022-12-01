@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -586,6 +586,7 @@ GameObject:
   - component: {fileID: 526888148}
   - component: {fileID: 526888147}
   - component: {fileID: 526888146}
+  - component: {fileID: 526888149}
   m_Layer: 5
   m_Name: PLAY
   m_TagString: Untagged
@@ -657,7 +658,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 526888147}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 526888149}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &526888147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,6 +709,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526888144}
   m_CullTransparentMesh: 1
+--- !u!114 &526888149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526888144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bb9b970d1234bb2a71893f307917be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Menu: {fileID: 0}
 --- !u!1 &567439884
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,6 +856,7 @@ GameObject:
   - component: {fileID: 905999403}
   - component: {fileID: 905999402}
   - component: {fileID: 905999401}
+  - component: {fileID: 905999404}
   m_Layer: 5
   m_Name: EXIT
   m_TagString: Untagged
@@ -901,7 +928,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 905999402}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 905999404}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &905999402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -940,6 +979,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905999399}
   m_CullTransparentMesh: 1
+--- !u!114 &905999404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905999399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bb9b970d1234bb2a71893f307917be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Menu: {fileID: 0}
 --- !u!1 &984907960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1072,7 @@ GameObject:
   - component: {fileID: 1001048855}
   - component: {fileID: 1001048854}
   - component: {fileID: 1001048853}
+  - component: {fileID: 1001048858}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1144,6 +1197,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1001048858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001048852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bb9b970d1234bb2a71893f307917be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Menu: {fileID: 0}
 --- !u!1 &1222465117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,6 +1377,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  Lstar: {fileID: 0}
+  Rstar: {fileID: 0}
+  Mstar: {fileID: 0}
 --- !u!81 &1227602371
 AudioListener:
   m_ObjectHideFlags: 0

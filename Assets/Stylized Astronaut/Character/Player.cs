@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
 		int randomControl = 2;
 		//float targetPosition;
 		public GameObject Lstar, Rstar, Mstar;
+		public GameObject Lship, Rship, Mship;
 
 		
 
@@ -80,16 +81,38 @@ public class Player : MonoBehaviour {
 			}
 			StartCoroutine(Wait());
 		}
+		void SpawnShips(){
+			int random;
+				random = Random.Range(1, 4);
+			
+			if(random == 1){
+				Instantiate(Lship, new Vector3(-5f,3f,62f), Quaternion.identity);
+			}else if(random == 2){
+				Instantiate(Mship, new Vector3(0f,3f,62f), Quaternion.identity);
+			}else if(random == 3){
+				Instantiate(Rship, new Vector3(5f,3f,62f), Quaternion.identity);
+			}
+			StartCoroutine(Wait3());
+		}
 		IEnumerator Wait()
 		{
 			yield return new WaitForSeconds(0.976f);
 			SpawnStars();
+			SpawnShips();
 			
 		}
+		
 		IEnumerator Wait2()
 		{
-			yield return new WaitForSeconds(23.1f);
+			yield return new WaitForSeconds(3f);
 			SpawnStars();
+			SpawnShips();
+			
+		}
+
+		IEnumerator Wait3()
+		{
+			yield return new WaitForSeconds(2f);
 			
 		}
 

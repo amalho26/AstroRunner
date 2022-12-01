@@ -478,6 +478,9 @@ MonoBehaviour:
   Lstar: {fileID: 7323912615754607127, guid: 4e9ad374f9b1c424ab4faceccce892cb, type: 3}
   Rstar: {fileID: 7208559311151038820, guid: 3c1455143c20644b6aea1fb35715b868, type: 3}
   Mstar: {fileID: 1467675495278022414, guid: 89b2e4b9b1c3c4bccb96b21e8f98e6ac, type: 3}
+  Lship: {fileID: 8481939345190659719, guid: b48b27cbc7e484e4b8d4a347a8e12925, type: 3}
+  Rship: {fileID: 6690711611149797486, guid: 018e0a30cb9ad4d4e94bc5ea793c699e, type: 3}
+  Mship: {fileID: 8051080036031175337, guid: b358679ea94d945cc8bdc2713ea6b33a, type: 3}
 --- !u!54 &8284076329061261985
 Rigidbody:
   m_ObjectHideFlags: 0
