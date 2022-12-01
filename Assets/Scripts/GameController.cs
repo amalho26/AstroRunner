@@ -19,14 +19,14 @@ public class GameController : MonoBehaviour
     void Update()
     {
         score += Time.deltaTime;
-        Debug.Log(score);
+        // Debug.Log(score);
         scoreText.text = score.ToString("0");
     }
 
     public void AdjustScore(float adjustment)
     {
         score += adjustment;
-        Debug.Log("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Score: " + score);
+        Debug.Log("////////////////////////////////////Score: " + score);
     }
     
     public void Restart()
