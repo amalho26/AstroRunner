@@ -2012,7 +2012,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b18177ace06ce4e1093b535523b4f3ae, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c0daf6e3bd7814f59b17fa0a5fa960af, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3343,6 +3343,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802871359049113446, guid: 89b2e4b9b1c3c4bccb96b21e8f98e6ac, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89b2e4b9b1c3c4bccb96b21e8f98e6ac, type: 3}
 --- !u!1 &1774227796048502380 stripped
@@ -3367,7 +3371,7 @@ MonoBehaviour:
   target: {fileID: 464344077}
   triggerTime: 0
   hasStarted: 0
-  audioSource: {fileID: 1448983963}
+  audioSource: {fileID: 0}
   startPlaying: 0
   player: {fileID: 8282929334075233127, guid: 9066efd21153647aeb9210c2a67e150b, type: 3}
 --- !u!1001 &3814550416036827762
@@ -3506,6 +3510,10 @@ PrefabInstance:
     - target: {fileID: 5871401718484809265, guid: 296af5cab7818486da68efd05a7d0e76, type: 3}
       propertyPath: m_Name
       value: Kick (sound effect)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871401718484809265, guid: 296af5cab7818486da68efd05a7d0e76, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5871401718484809266, guid: 296af5cab7818486da68efd05a7d0e76, type: 3}
       propertyPath: m_RootOrder
@@ -3701,7 +3709,7 @@ PrefabInstance:
     - target: {fileID: 7550455550663590995, guid: 3c1455143c20644b6aea1fb35715b868, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 1448983963}
+      objectReference: {fileID: 0}
     - target: {fileID: 8017007861761465310, guid: 3c1455143c20644b6aea1fb35715b868, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3778,7 +3786,7 @@ PrefabInstance:
     - target: {fileID: 7593819293296908651, guid: 4e9ad374f9b1c424ab4faceccce892cb, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 1448983963}
+      objectReference: {fileID: 0}
     - target: {fileID: 7991658519663112365, guid: 4e9ad374f9b1c424ab4faceccce892cb, type: 3}
       propertyPath: m_RootOrder
       value: 1
