@@ -134,6 +134,7 @@ public class Player : MonoBehaviour {
 		IEnumerator Wait2()
 		{
 			yield return new WaitForSeconds(22.88f);
+
 			SpawnStars();
 			SpawnShips();
 			SpawnHearts();
@@ -146,6 +147,4 @@ public class Player : MonoBehaviour {
 			yield return new WaitForSeconds(2f);
 			
 		}
-
-
 }
