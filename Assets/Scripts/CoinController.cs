@@ -4,7 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using TMPro;
 
-public class StarController : MonoBehaviour
+public class CoinController : MonoBehaviour
 {
 
     // public GameController GC ;
@@ -18,7 +18,7 @@ public class StarController : MonoBehaviour
     public bool startPlaying;
     public GameObject player;
 
-    bool starScore = false;
+    // bool starScore = false;
     
 
     void Start()
@@ -36,11 +36,11 @@ public class StarController : MonoBehaviour
 
     }
     void OnTriggerEnter(Collider col){
-        Debug.Log("Star hit");      
+        Debug.Log("$$$ Coin Collected $$$");      
         if(col.gameObject.tag == player.tag){
-          Debug.Log("************************* Player hit *************************");
+          Debug.Log("$$$$$************ $ Player Collected Coin $ **************$$$$$");
           audioSource.Play();
-          GC.AdjustScore(10f);         
+          // GC.AdjustScore(100f);         
         }
     }
 
