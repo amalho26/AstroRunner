@@ -94,7 +94,7 @@ public class GameController : MonoBehaviour
         }
         IEnumerator Wait()
         {
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(180);
             WriteString();
                     Debug.Log("Game Started");
             SceneManager.LoadScene("MainMenu");

@@ -549,7 +549,12 @@ PrefabInstance:
       propertyPath: speed
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2abf19653d633114faedf3b60dc6c39f, type: 3}
 --- !u!1 &168376485
 GameObject:
@@ -2515,6 +2520,7 @@ GameObject:
   - component: {fileID: 1274527786}
   - component: {fileID: 1274527788}
   - component: {fileID: 1274527787}
+  - component: {fileID: 1274527789}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -2588,6 +2594,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274527785}
   m_CullTransparentMesh: 1
+--- !u!114 &1274527789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274527785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfcd9a402b9ec4598bce90588fe2cc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score1: {fileID: 539827985}
+  score2: {fileID: 1543837478}
+  score3: {fileID: 1532970902}
 --- !u!1 &1317147397
 GameObject:
   m_ObjectHideFlags: 0
