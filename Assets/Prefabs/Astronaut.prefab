@@ -397,9 +397,9 @@ GameObject:
   - component: {fileID: 8284892424210235545}
   - component: {fileID: 8332860404965694611}
   - component: {fileID: 8289926037817439171}
-  - component: {fileID: 8313649754614729511}
   - component: {fileID: 8284076329061261985}
   - component: {fileID: 8284076329061261982}
+  - component: {fileID: 242405006804974166}
   m_Layer: 0
   m_Name: Astronaut
   m_TagString: Astronaut
@@ -462,22 +462,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.125, z: -0.01}
---- !u!114 &8313649754614729511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8282929334075233127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e19da6a22259d4299a67d51a3c65f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  Lstar: {fileID: 7323912615754607127, guid: 4e9ad374f9b1c424ab4faceccce892cb, type: 3}
-  Rstar: {fileID: 7208559311151038820, guid: 3c1455143c20644b6aea1fb35715b868, type: 3}
-  Mstar: {fileID: 1467675495278022414, guid: 89b2e4b9b1c3c4bccb96b21e8f98e6ac, type: 3}
 --- !u!54 &8284076329061261985
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -508,6 +492,31 @@ CapsuleCollider:
   m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &242405006804974166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8282929334075233127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e19da6a22259d4299a67d51a3c65f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 600
+  Lstar: {fileID: 7323912615754607127, guid: 4e9ad374f9b1c424ab4faceccce892cb, type: 3}
+  Rstar: {fileID: 7208559311151038820, guid: 3c1455143c20644b6aea1fb35715b868, type: 3}
+  Mstar: {fileID: 1467675495278022414, guid: 89b2e4b9b1c3c4bccb96b21e8f98e6ac, type: 3}
+  Lship: {fileID: 8481939345190659719, guid: b48b27cbc7e484e4b8d4a347a8e12925, type: 3}
+  Rship: {fileID: 8051080036031175337, guid: b358679ea94d945cc8bdc2713ea6b33a, type: 3}
+  Mship: {fileID: 6690711611149797486, guid: 018e0a30cb9ad4d4e94bc5ea793c699e, type: 3}
+  Lheart: {fileID: 6953631999805023808, guid: 6eb4b6162c217485ca31725d4e3c1752, type: 3}
+  Rheart: {fileID: 1398986186943163071, guid: dec2b85c1ec3549b18508f5cdcdd4acc, type: 3}
+  Mheart: {fileID: 2425539929568354312, guid: bb0e7d64c540a45c48cdc5de7e8c7d34, type: 3}
+  Lcoin: {fileID: 6900304138180678147, guid: e2e532f70d6e94892819b3c48465b2d3, type: 3}
+  Rcoin: {fileID: 5360910810606543641, guid: 984915617926e4ce9ad36112a61cbc6b, type: 3}
+  Mcoin: {fileID: 97272848718381412, guid: c83a4a6d53bc54bd8a721f704b8c8c51, type: 3}
 --- !u!1 &8282930717093423143
 GameObject:
   m_ObjectHideFlags: 0

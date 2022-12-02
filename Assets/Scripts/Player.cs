@@ -8,13 +8,17 @@ public class Player : MonoBehaviour {
 		Vector3 targetPositionLeft = new Vector3(-5f,0f,42f);
 		Vector3 targetPositionMiddle = new Vector3(0f,0f,42f);
 		Vector3 newPosition;
+
 		private bool right = false;
 		private bool left = false;
 		float checkDistance = 0.001f;
 		float movementSpeed = 8f;
 		int randomControl = 2;
-		//float targetPosition;
+
 		public GameObject Lstar, Rstar, Mstar;
+		public GameObject Lship, Rship, Mship;
+		public GameObject Lheart, Rheart, Mheart;
+		public GameObject Lcoin, Rcoin, Mcoin;
 
 		
 
@@ -80,16 +84,66 @@ public class Player : MonoBehaviour {
 			}
 			StartCoroutine(Wait());
 		}
+		void SpawnShips(){
+			int random;
+				random = Random.Range(1, 4);
+			
+			if(random == 1){
+				Instantiate(Lship, new Vector3(-5f,3f,62f), Quaternion.identity);
+			}else if(random == 2){
+				Instantiate(Mship, new Vector3(0f,3f,62f), Quaternion.identity);
+			}else if(random == 3){
+				Instantiate(Rship, new Vector3(5f,3f,62f), Quaternion.identity);
+			}
+			StartCoroutine(Wait3());
+		}
+		void SpawnHearts(){
+			int random;
+				random = Random.Range(1, 4);
+			if(random == 1){
+				Instantiate(Lheart, new Vector3(-5f,3f,62f), Quaternion.identity);
+			}else if(random == 2){
+				Instantiate(Mheart, new Vector3(0f,3f,62f), Quaternion.identity);
+			}else if(random == 3){
+				Instantiate(Rheart, new Vector3(5f,3f,62f), Quaternion.identity);
+			}
+			StartCoroutine(Wait3());
+		}
+		void SpawnCoins(){
+			int random;
+				random = Random.Range(1, 4);
+			if(random == 1){
+				Instantiate(Lcoin, new Vector3(-5f,3f,62f), Quaternion.identity);
+			}else if(random == 2){
+				Instantiate(Mcoin, new Vector3(0f,3f,62f), Quaternion.identity);
+			}else if(random == 3){
+				Instantiate(Rcoin, new Vector3(5f,3f,62f), Quaternion.identity);
+			}
+			StartCoroutine(Wait3());
+		}		
 		IEnumerator Wait()
 		{
 			yield return new WaitForSeconds(0.976f);
 			SpawnStars();
+			SpawnShips();
+			SpawnHearts();
+			SpawnCoins();
 			
 		}
+		
 		IEnumerator Wait2()
 		{
 			yield return new WaitForSeconds(22.88f);
 			SpawnStars();
+			SpawnShips();
+			SpawnHearts();
+			SpawnCoins();
+			
+		}
+
+		IEnumerator Wait3()
+		{
+			yield return new WaitForSeconds(2f);
 			
 		}
 
