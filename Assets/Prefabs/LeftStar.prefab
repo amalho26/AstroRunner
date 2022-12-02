@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6880401486268401773
+--- !u!1 &158446557801136662
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7829652178283591370}
-  - component: {fileID: 9111573550984456733}
+  - component: {fileID: 3576529039097505265}
+  - component: {fileID: 3293072704223228415}
   m_Layer: 0
-  m_Name: Kick (sound effect)
+  m_Name: beat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7829652178283591370
+--- !u!4 &3576529039097505265
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6880401486268401773}
+  m_GameObject: {fileID: 158446557801136662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,17 +32,17 @@ Transform:
   m_Father: {fileID: 7991658519663112365}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &9111573550984456733
+--- !u!82 &3293072704223228415
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6880401486268401773}
+  m_GameObject: {fileID: 158446557801136662}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b18177ace06ce4e1093b535523b4f3ae, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c0daf6e3bd7814f59b17fa0a5fa960af, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -160,7 +160,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7829652178283591370}
+  - {fileID: 3576529039097505265}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -245,6 +245,6 @@ MonoBehaviour:
   target: {fileID: 3898931279854001550, guid: 13f8ca6bccabb496cbea90dd5bacc8bd, type: 3}
   triggerTime: 0
   hasStarted: 0
-  audioSource: {fileID: 9111573550984456733}
+  audioSource: {fileID: 3293072704223228415}
   startPlaying: 0
   player: {fileID: 8282929334075233127, guid: 9066efd21153647aeb9210c2a67e150b, type: 3}

@@ -123,27 +123,33 @@ public class Player : MonoBehaviour {
 		}		
 		IEnumerator Wait()
 		{
-			yield return new WaitForSeconds(0.976f);
+			yield return new WaitForSeconds(0.975f);
 			SpawnStars();
-			SpawnShips();
-			SpawnHearts();
-			SpawnCoins();
+			// SpawnShips();
+			// SpawnHearts();
+			// SpawnCoins();
 			
 		}
 		
 		IEnumerator Wait2()
 		{
-			yield return new WaitForSeconds(3f);
+			yield return new WaitForSeconds(21.905f);
 			SpawnStars();
-			SpawnShips();
-			SpawnHearts();
-			SpawnCoins();
+			// SpawnShips();
+			// SpawnHearts();
+			// SpawnCoins();
 			
 		}
 
 		IEnumerator Wait3()
 		{
 			yield return new WaitForSeconds(2f);
+			
+		}
+
+		IEnumerator DoubleCoinsOne()
+		{
+			yield return new WaitForSeconds(10f);
 			
 		}
 

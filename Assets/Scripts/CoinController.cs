@@ -40,7 +40,8 @@ public class CoinController : MonoBehaviour
         if(col.gameObject.tag == player.tag){
           Debug.Log("$$$$$************ $ Player Collected Coin $ **************$$$$$");
           audioSource.Play();
-          // GC.AdjustScore(100f);         
+          GC.AdjustScore(100f);    
+          Destroy(gameObject);     
         }
     }
 

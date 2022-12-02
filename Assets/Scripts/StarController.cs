@@ -40,7 +40,9 @@ public class StarController : MonoBehaviour
         if(col.gameObject.tag == player.tag){
           Debug.Log("************************* Player hit *************************");
           audioSource.Play();
-          GC.AdjustScore(10f);         
+          GC.AdjustScore(10f);
+          StartCoroutine(Wait());
+
         }
     }
 
@@ -48,5 +50,11 @@ public class StarController : MonoBehaviour
     void SendNote()
     {
         transform.DOMove(target.position, duration);
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
     }
 }

@@ -40,7 +40,8 @@ public class HeartController : MonoBehaviour
         if(col.gameObject.tag == player.tag){
           Debug.Log("<3 <3 <3 ******** Player Collected Heart ***** <3 <3 <3 ");
           audioSource.Play();
-          GC.AdjustScore(20f);         
+          GC.AdjustScore(20f);
+          Destroy(gameObject);       
         }
     }
 
