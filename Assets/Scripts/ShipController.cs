@@ -23,6 +23,7 @@ public class ShipController : MonoBehaviour
 
     void Start()
     {
+      GC = FindObjectOfType<GameController>();
     }
     void Update()
     {
@@ -39,7 +40,7 @@ public class ShipController : MonoBehaviour
         if(col.gameObject.tag == player.tag){
           Debug.Log("************************* Player hit *************************");
           audioSource.Play();
-          GC.AdjustScore(-100f);         
+          GC.AdjustScore(-10f);         
         }
     }
 
